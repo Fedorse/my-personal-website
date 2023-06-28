@@ -14,11 +14,13 @@
         <div class="hero">
           <div class="hero-content">
             <div class="name">Fedor Semochkin</div>
-            <div class="proffesion">Qa Engineer</div>
+            <div class="proffesion">QA Engineer</div>
             <div class="navigation">
-              <a class="link" href="#about">about</a>
-              <a class="link" href="#skills">skills</a>
-              <a class="link" href="#contacts">contacts</a>
+              <a class="link" href="#about" data-testid="aboutlink">about</a>
+              <a class="link" href="#skills" data-testid="skillslink">skills</a>
+              <a class="link" href="#contacts" data-testid="contactslink"
+                >contacts</a
+              >
             </div>
           </div>
           <picture>
@@ -101,7 +103,11 @@
         <div class="page-title">contacts</div>
         <div class="page-content contacts">
           <div class="email">221800ss@gmail.com</div>
-          <a class="contact" href="https://t.me/Fedorsemochkin">
+          <a
+            class="contact"
+            href="https://t.me/Fedorsemochkin"
+            data-testid="tg"
+          >
             <svg
               class="icon"
               stroke="currentColor"
@@ -116,7 +122,11 @@
             </svg>
             @Fedorsemochkin
           </a>
-          <a class="contact" href="https://github.com/Fedorse">
+          <a
+            class="contact"
+            href="https://github.com/Fedorse"
+            data-testid="git"
+          >
             <svg
               class="icon"
               stroke="currentColor"
@@ -134,7 +144,7 @@
         </div>
 
         <div class="footer">
-          <a href="#home" class="goback">
+          <a href="#home" class="goback" data-testid="back">
             <svg
               width="12"
               height="15"
