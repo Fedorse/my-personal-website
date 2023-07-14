@@ -13,12 +13,36 @@
       <div class="slide" id="home">
         <div class="hero">
           <div class="hero-content">
-            <div class="name">Fedor Semochkin</div>
-            <div class="proffesion">QA Engineer</div>
+            <div id="languageSelect" class="language">
+              <button class="en" id="enButton" onclick="changeLanguage('en')">
+                EN
+              </button>
+              <button class="ru" id="ruButton" onclick="changeLanguage('ru')">
+                RU
+              </button>
+            </div>
+            <div class="name" data-lang="name">Fedor Semochkin</div>
+            <div class="proffesion" data-lang="proffesion">QA Engineer</div>
             <div class="navigation">
-              <a class="link" href="#about" data-testid="aboutlink">about</a>
-              <a class="link" href="#skills" data-testid="skillslink">skills</a>
-              <a class="link" href="#contacts" data-testid="contactslink"
+              <a
+                class="link"
+                href="#about"
+                data-testid="abouttest"
+                data-lang="about"
+                >about</a
+              >
+              <a
+                class="link"
+                href="#skills"
+                data-testid="skills"
+                data-lang="skills"
+                >skills</a
+              >
+              <a
+                class="link"
+                href="#contacts"
+                data-testid="contacts"
+                data-lang="contacts"
                 >contacts</a
               >
             </div>
@@ -30,8 +54,8 @@
         </div>
       </div>
       <div class="slide page" id="about">
-        <div class="page-title">about</div>
-        <div class="page-content">
+        <div class="page-title" data-lang="titleAbout">about</div>
+        <div class="page-content" data-lang="contentAbout">
           Hello! I'm Fedor Qa Engineer currently living in Thailand on Koh
           Samui. I'm developing in the IT field, in 2022 I decided to change the
           field of activity and started transport testing. Passed the course
@@ -43,26 +67,42 @@
         </div>
       </div>
       <div class="slide page" id="skills">
-        <div class="page-title">skills</div>
+        <div class="page-title" data-lang="titleSkills">skills</div>
         <div class="page-content">
-          <div class="skills-intro">
+          <div class="skills-intro" data-lang="skillsIntro">
             Hello! I'm Fedor Qa Engineer currently living in Thailand on Koh
             Samui.
           </div>
           <div class="skills-wrapper">
             <div class="skill-container">
-              <div class="skill-title">Testing theory</div>
+              <div class="skill-title" data-lang="titleSkill">
+                Testing theory
+              </div>
               <div class="skills">
-                <div class="skill">Testing principles</div>
-                <div class="skill">Types of testing</div>
-                <div class="skill">Test design techniques</div>
-                <div class="skill">Test documentation</div>
-                <div class="skill">Client-server architecture</div>
-                <div class="skill">Web application testing</div>
+                <div class="skill" data-lang="testingTheory1">
+                  Testing principles
+                </div>
+                <div class="skill" data-lang="testingTheory2">
+                  Types of testing
+                </div>
+                <div class="skill" data-lang="testingTheory3">
+                  Test design techniques
+                </div>
+                <div class="skill" data-lang="testingTheory4">
+                  Test documentation
+                </div>
+                <div class="skill" data-lang="testingTheory5">
+                  Client-server architecture
+                </div>
+                <div class="skill" data-lang="testingTheory6">
+                  Web application testing
+                </div>
               </div>
             </div>
             <div class="skill-container temp-fix">
-              <div class="skill-title">Testing tools</div>
+              <div class="skill-title" data-lang="titleSkill1">
+                Testing tools
+              </div>
               <div class="skills">
                 <div class="skill">Postman</div>
                 <div class="skill">SoapUI</div>
@@ -76,11 +116,13 @@
         </div>
       </div>
       <div class="slide page">
-        <div class="page-title">skills</div>
+        <div class="page-title" data-lang="titleSkills">skills</div>
         <div class="page-content">
           <div class="skills-wrapper">
             <div class="skill-container">
-              <div class="skill-title">Team collaboration</div>
+              <div class="skill-title" data-lang="titleSkill2">
+                Team collaboration
+              </div>
               <div class="skills">
                 <div class="skill">GitHab</div>
                 <div class="skill">Git</div>
@@ -89,7 +131,9 @@
               </div>
             </div>
             <div class="skill-container">
-              <div class="skill-title">Web technologies</div>
+              <div class="skill-title" data-lang="titleSkill3">
+                Web technologies
+              </div>
               <div class="skills">
                 <div class="skill">HTML</div>
                 <div class="skill">CSS</div>
@@ -100,14 +144,10 @@
         </div>
       </div>
       <div class="slide page contacts-page" id="contacts">
-        <div class="page-title">contacts</div>
+        <div class="page-title" data-lang="titleContacts">contacts</div>
         <div class="page-content contacts">
           <div class="email">221800ss@gmail.com</div>
-          <a
-            class="contact"
-            href="https://t.me/Fedorsemochkin"
-            data-testid="tg"
-          >
+          <a class="contact" href="https://t.me/Fedorsemochkin">
             <svg
               class="icon"
               stroke="currentColor"
@@ -122,11 +162,7 @@
             </svg>
             @Fedorsemochkin
           </a>
-          <a
-            class="contact"
-            href="https://github.com/Fedorse"
-            data-testid="git"
-          >
+          <a class="contact" href="https://github.com/Fedorse">
             <svg
               class="icon"
               stroke="currentColor"
@@ -144,7 +180,7 @@
         </div>
 
         <div class="footer">
-          <a href="#home" class="goback" data-testid="back">
+          <a href="#home" class="goback" id="back-to-top" data-lang="goback">
             <svg
               width="12"
               height="15"
@@ -159,11 +195,13 @@
             </svg>
             Back to top
           </a>
-          <div class="copyright">
+          <div class="copyright" data-lang="developer">
             Fedor Semochkin © 2023. All Rights Reserved.
           </div>
         </div>
       </div>
     </div>
   </body>
+  <script src="app.js" type="module"></script>
+  <script src="langArr.js" type="module"></script>
 </html>
