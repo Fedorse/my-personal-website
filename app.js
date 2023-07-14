@@ -13,12 +13,16 @@ document.addEventListener("DOMContentLoaded", () => {
   enButton.addEventListener("click", () => {
     currentLang = "en";
     document.title = "My page";
+    enButton.classList.add("active");
+    ruButton.classList.remove("active");
     updateLanguage();
   });
 
   ruButton.addEventListener("click", () => {
     currentLang = "ru";
     document.title = "Моя страница";
+    ruButton.classList.add("active");
+    enButton.classList.remove("active");
     updateLanguage();
   });
 
